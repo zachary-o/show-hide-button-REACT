@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      {isShown && <img src={pic} alt="Ysruk" />}
+      {isShown && <img src={pic} alt="Yaruk" />}
       <button onClick={toggleShown}>{isShown ? "Hide" : "Show"} Yaruk</button>
     </div>
   );
