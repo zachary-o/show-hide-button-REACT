@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import styles from "./index.css";
+import pic from "./yaruk.jpg";
 function App() {
+  const [isShown, setIsShown] = useState(false);
+
+  const toggleShown = () => {
+    setIsShown((prevShown) => !prevShown);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isShown && <img src={pic} alt="Ysruk" />}
+      <button onClick={toggleShown}>{isShown ? "Hide" : "Show"} Yaruk</button>
     </div>
   );
 }
